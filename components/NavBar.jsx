@@ -1,9 +1,10 @@
+'use client'
 import React from "react";
 import requests from "@/utils/requests";
-// import {useRouter} from 'next/navigation';
+import {useRouter} from 'next/navigation';
 
 function NavBar() {
-    // const router = useRouter();
+    const router = useRouter();
   return (
     <nav className="relative">
       <div
@@ -13,7 +14,7 @@ function NavBar() {
         {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
-            // onClick={() => router.push(`/?genre=${key}`)}
+            onClick={() => router.push(`/?genre=${key}`)}
             className="last:pr-24 cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500"
           >
             {title}
