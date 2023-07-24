@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import React from "react";
 import requests from "@/utils/requests";
-import {useRouter} from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 function NavBar() {
-    const router = useRouter();
+  const router = useRouter();
   return (
     <nav className="relative">
       <div
